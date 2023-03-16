@@ -1,0 +1,341 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #002947;
+  color: white;
+  font-family: sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-top: 20px;
+  align-items: center;
+  margin-bottom: 33px;
+}
+
+/* .logo {
+position: relative;
+} */
+
+.logo a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #FFFFFF;
+  /* position: relative; */
+  font-weight: 600;
+  padding-left: 20px;
+}
+
+.logo::before {
+  content: url('images/back.png');
+  /* position: absolute; */
+}
+
+.logo a span {
+  color: #E47C29;
+  font-style: italic;
+}
+
+.live-display a {
+  font-size: 12px;
+  text-decoration: none;
+  color: white;
+  background: #FF4848;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: 400;
+  position: relative;
+  padding-left: 20px;
+}
+
+.live-display a::before {
+  content: '';
+  position: absolute;
+  background-color: white;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  left: 6px;
+  bottom: 8px;
+}
+
+/* Team-display-section starts */
+.team-display-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px
+  /* align-items: baseline; */
+}
+
+.vs-display {
+  display: flex;
+  align-items: center;
+}
+
+.vs-display span {
+  position: relative;
+}
+
+.vs-display span::after{
+  content: '';
+    width: 38px;
+    height: 1px;
+    background-color: #024B5C;
+    position: absolute;
+    left: -10px;
+    bottom: 8px;
+    z-index: -1;
+}
+
+.team-a,
+.team-b {
+  display: flex;
+  align-items: center;
+}
+
+.team-a .team-img {
+  background: white;
+  border-radius: 50%;
+  padding: 3px;
+  margin-left: 10px;
+  margin-right: 36px;
+  height: 27px;
+  width: 27px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-b .team-img {
+  background: white;
+  border-radius: 50%;
+  padding: 3px;
+  margin-left: 36px;
+  margin-right: 10px;
+  height: 27px;
+  width: 27px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-display-container span {
+  font-size: 8px;
+  font-weight: 500;
+  background: #024B5C;
+  border-radius: 50%;
+  color: white;
+  padding: 4px;
+}
+
+.team-a span,
+.team-b span {
+  font-size: 12px;
+  color: white;
+  background: transparent;
+  padding: 0;
+}
+
+/* Fantasy-team-display starts */
+.fantasy-team-display-container {
+  display: flex;
+  justify-content: center;
+  color: white;
+  background: #024B5C;
+  border-radius: 4px;
+  margin: 0 10px;
+  padding: 20px 0;
+}
+
+.vs-display {
+  display: flex;
+  align-items: center;
+}
+
+.fantasy-team-a,
+.fantasy-team-b {
+  display: flex;
+  align-items: center;
+}
+
+.fantasy-team-a span {
+  background: #82ABFA;
+  border: 1px solid #3D65B3;
+  border-radius: 50%;
+  padding: 3px;
+  margin-left: 10px;
+  margin-right: 20px;
+  height: 27px;
+  width: 27px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.fantasy-team-b span {
+  background: #20BEB5;
+  border: 1px solid #0D8780;
+  border-radius: 50%;
+  padding: 3px;
+  margin-left: 20px;
+  margin-right: 10px;
+  height: 27px;
+  width: 27px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.fantasy-team-display-container .no-display {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  background: #012C36;
+  border-radius: 4px;
+  color: white;
+  padding: 10px;
+}
+
+.fantasy-team-a .team-name,
+.fantasy-team-b .team-name {
+  font-size: 12px;
+  /* background: transparent; */
+  /* border: none; */
+  text-transform: capitalize;
+  /* margin: 0; */
+  max-width: 50px;
+  /* color: white;
+  padding: 0; */
+}
+
+.fantasy-team-a .team-name {
+  text-align: right;
+}
+
+/* Fantasy-team-listing starts */
+.fantasy-team-listing-container {
+  display: flex;
+  margin: 0 20px;
+}
+
+.fantasy-team-a-listing,
+.fantasy-team-b-listing {
+  width: 50%;
+}
+
+.fantasy-team-a-listing ul,
+.fantasy-team-b-listing ul {
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.fantasy-team-a-listing li,
+.fantasy-team-b-listing li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.fantasy-team-a-listing li:last-of-type,
+.fantasy-team-b-listing li:last-of-type {
+  margin-bottom: 0;
+}
+
+.fantasy-team-b-listing li {
+  flex-direction: row-reverse;
+}
+
+.fantasy-team-a-listing ul {
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.fantasy-team-a-listing .player-img img,
+.fantasy-team-b-listing .player-img img {
+  background: white;
+  border: 1px solid #FFFFFF;
+  border-radius: 4px;
+  display: none;
+}
+
+.player-img {
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 70%, rgba(255,255,255,1) 100%),url(images/player-img.png);
+  background-size: 100%;
+  height: 53px;
+  width: 46px;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid #FFFFFF;
+  position: relative;
+}
+
+.team-logo-img::after {
+  content: '';
+  background-image: url('images/team-a.png');
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  height: 7.5px;
+  width: 7.5px;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 1px;
+  background-size: 100%;
+
+}
+
+.player-info .player-name {
+  font-weight: 500;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.player-info .player-title {
+  font-size: 8px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 14px;
+  padding: 1px 10px;
+}
+
+.player-no {
+  color: #00B1DB;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.fantasy-team-a-listing .player-info {
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.fantasy-team-b-listing .player-info {
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.fantasy-team-b-listing .player-name {
+  text-align: right;
+}
+
+/* Button-container starts */
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+.btn-container a {
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  background: #E47C29;
+  border-radius: 4px;
+  width: 47%;
+  text-align: center;
+  padding: 11.5px 0;
+}
